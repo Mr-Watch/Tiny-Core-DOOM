@@ -20,5 +20,5 @@ The recommend order that you view the directories is this:
 ## TinyCoom
 
 This is the most heavily modified version of the iso and it is a bit more... DOOMy if you get what I mean :wink:  
-You can find this version in the releases section of the repository.  
+You can find this version in the [releases](https://github.com/Mr-Watch/Tiny-Core-DOOM/releases/tag/Initial-Release) section of the repository.  
 Or better yet make your own version using the script and accompanying files found in the [TinyCoom](https://github.com/Mr-Watch/Tiny-Core-DOOM/tree/main/TinyCoom) directory.
