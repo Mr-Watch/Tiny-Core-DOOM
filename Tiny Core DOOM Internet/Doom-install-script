@@ -25,6 +25,7 @@ wget https://archive.org/download/doom-wads/Doom%20%28v1.9%29.zip
 unzip Doom\ \(v1.9\).zip
 rm -f Doom\ \(v1.9\).zip
 
+sudo chmod +x fbdoom
 touch run-doom
 echo "clear; ./fbdoom -iwad DOOM.WAD; clear; cat /etc/motd" > run-doom
 chmod 755 run-doom
