@@ -1,9 +1,9 @@
 # TinyCoom
 
-As the name **clearly** implies this is **TinyC** - ore + D - **oom** and is the final result of all the experimentation I when through when modifying the original iso.  
+As the name **clearly** implies, this is **TinyC** - ore + D - **oom** and is the final result of all the experimentation I when through when modifying the original ISO.  
 This is the magnum opus.  
 The best result that I could achieve.  
-It is essentially [Tiny Core DOOM File Substitution](https://github.com/Mr-Watch/Tiny-Core-DOOM/tree/main/Tiny%20Core%20DOOM%20File%20Substitution) with a few more files modifed to give it a bit more of a **DOOM** vibe, which is something that the [DoomLinux](https://github.com/shadlyd15/DoomLinux) repository lacked in my opinion.  
+It is essentially [Tiny Core DOOM File Substitution](https://github.com/Mr-Watch/Tiny-Core-DOOM/tree/main/Tiny%20Core%20DOOM%20File%20Substitution) with a few more files modified to give it a bit more of a **DOOM** vibe, which is something that the [DoomLinux](https://github.com/shadlyd15/DoomLinux) repository lacked in my opinion.  
 Not that it was necessary, but I just thought it might have been fun to include, to make the distro feel a bit more unique.
 
 ## Doom-install-script
@@ -26,8 +26,8 @@ cd etc || exit
 sudo cp ../../../../motd motd
 ```
 
-Here we copy three files into the *boot* directory of our extracted iso and we also place another file in to the */etc* of the iso's filesystem.  
-Now what the hell are these files and why are we changing them?  
+Here we copy three files into the *boot* directory of our extracted ISO, and we also place another file in to the */etc* of the ISO's file system.  
+Now what the hell are these files, and why are we changing them?  
 
 The **boot.msg** file contains the initial slash screen when we boot into Tiny Core Linux in the form of text.  
 The **f5** file contains an additional selectable splash screen (pressing the **f5** activates it, as the name implies) in the form of text.  
@@ -57,5 +57,5 @@ F5 f5
 The options we are interested in are:  
 
 - `display boot.msg` - so the splash screen is displayed.  
-- `append vga=784 user=doom host=guy` - so that the frame buffer is enabled and the **user** is changed to **doom** and the **host** to **guy** (got to commit to the theme :joy:).  
-- `F5 f5` - so that the F5 key can bring up the f5 splash screen... :melting_face:
+- `append vga=784 user=doom host=guy` - so that the frame buffer is enabled, and the **user** is changed to **doom** and the **host** to **guy** (got to commit to the theme :joy:).  
+- `F5 f5` - so that the F5 key can bring up the f5 splash screen… :melting_face:
