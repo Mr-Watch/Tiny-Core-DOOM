@@ -3,8 +3,8 @@
 ## Doom-install-script
 
 This script generates a version of Tiny Core Linux that downloads all the necessary files required to run DOOM.  
-For the DOOM engine that is used is [fbdoom](https://github.com/maximevince/fbDOOM), since it was the easiest to get working under Tiny Core Linux.  
-When you boot the generated iso (assuming you can get a **working internet connection** under Tiny Core Linux) it will start executing a script that will download **first the required dependencies** (linux-6.12_api_headers glibc_base-dev gcc SDL git make wget).  
+The DOOM engine that is used is [fbdoom](https://github.com/maximevince/fbDOOM), since it was the easiest to get working under Tiny Core Linux, whilst only needing to use a framebuffer to draw the graphics.  
+When you boot the generated iso (assuming you can get a **working internet connection** under Tiny Core Linux) it will start executing a script that will download **first the required dependencies** (linux-6.12_api_headers, glibc_base-dev, gcc, SDL, git, make, wget).  
 Then it will clone the **fbdoom** repository and procid to compile it into an executable binary.  
 After that is done it uses **wget** to download the DOOM WAD file (v1.9).  
 Finally it creates a little starter script for DOOM and proceeds to execute it.  
@@ -20,7 +20,8 @@ The script requires **three** arguments :
 2. Script to be injected
 3. Desired output name
 
-A valid invocation would look like this `./script-injector.sh Core-current.iso injected-script output` where "injected-script" and "output" can be anything (the "injected-script" has to be an existing file).  
+A valid invocation would look like this `./script-injector.sh Core-current.iso injected-script output` where "injected-script" and "output" can be anything (the "injected-script" has to be an existing file and both the .iso file and "injected-script" have to be in the same directory as the script-injector.sh).
+  
 For the script to work you need to run `chmod +x script-injector.sh` to make it executable.  
 
 > [!NOTE]
