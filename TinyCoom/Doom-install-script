@@ -8,6 +8,7 @@ sudo mv os-release.old os-release
 sudo mv issue.old issue
 cd || exit
 
+sudo chmod +x fbdoom
 touch run-doom
 echo "clear; ./fbdoom -iwad DOOM.WAD; clear; cat /etc/motd" > run-doom
 chmod 755 run-doom
