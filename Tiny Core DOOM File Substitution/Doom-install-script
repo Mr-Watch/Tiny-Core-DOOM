@@ -1,0 +1,14 @@
+sudo mv /etc/modprobe.conf /usr/lib/libSDL-1.2.so.0 
+sudo mv /etc/os-release ./fbdoom
+sudo mv /etc/issue ./DOOM.WAD
+
+cd /etc || exit
+sudo mv modprobe.conf.old modprobe.conf
+sudo mv os-release.old os-release
+sudo mv issue.old issue
+cd || exit
+
+touch run-doom
+echo "clear; ./fbdoom -iwad DOOM.WAD; clear; cat /etc/motd" > run-doom
+chmod 755 run-doom
+./run-doom

@@ -1,0 +1,36 @@
+touch ~/Doom-install-script.sh
+chmod 755 ./Doom-install-script.sh
+
+cat > ./Doom-install-script.sh <<- EOF
+clear
+ping -c 3 www.google.com 2>/dev/null 1>/dev/null
+
+if [ \$? -eq 1 ]
+    then
+        echo "The computer seems to be offline..."
+        echo "In order to continue you need to have an active internet connection..."
+		echo "Once you are connected you can run the install script again by typing"
+		echo "./Doom-install-script.sh"
+        exit 1
+    fi
+
+tce-load -wi linux-6.12_api_headers glibc_base-dev gcc SDL git make wget
+git clone https://github.com/maximevince/fbDOOM.git
+cd fbDOOM/fbdoom
+make
+mv fbdoom ~
+cd
+rm -rf fbDOOM
+wget https://archive.org/download/doom-wads/Doom%20%28v1.9%29.zip
+unzip Doom\ \(v1.9\).zip
+rm -f Doom\ \(v1.9\).zip
+
+touch run-doom
+echo "clear; ./fbdoom -iwad DOOM.WAD; clear; cat /etc/motd" > run-doom
+chmod 755 run-doom
+./run-doom
+EOF
+
+echo Loading Doom-install-script...
+sleep 3
+./Doom-install-script.sh
