@@ -2,13 +2,13 @@
 
 ## Doom-install-script
 
-This idea was born from sleep depravation and a very clouded mind and is quite possibly the most idiotic, asinine way once could go about trying to run DOOM on any operating system.  
+This idea was born from sleep depravation and a very clouded mind :face_with_spiral_eyes: and is quite possibly the most idiotic, asinine way once could go about trying to run DOOM on any operating system.  
 While I was experimenting with modifying the iso, I noticed that any files I placed inside where not persisting after the boot-up sequence finished.  
 So with (at the time) no obvious way to include the files I needed (a precompiled version of fbdoom, libSDL-1.2.so.0 as well as the DOOM1.WAD) I said to myself...  
 
 > Was there a way to include the files somehow in the injected script...?  
 
-And then eureka!!!  
+And then eureka!!! :raised_hands:  
 
 > I can just include the **RAW** bytes as hexadecimal using some kind of script and then **painstakingly** decode them back into the correct files using another script! ...
 
@@ -32,7 +32,7 @@ What this does is accentually create three files with a .hex extension which lat
 What I did not take into account is that the process of writing the .hex files is very fast, the process of turing them back into the originals is **UNFATHOMABLY** slow (especially on the systems Tiny Core Linux is meant to run on).  
 That is the reason that the included DOOM version is the shareware one.  
 Decoding the full fat version of the WAD could take **HOURS**.  
-**But** as a proof of concept... I think it's pretty neat (but also very stupid).
+**But** as a proof of concept... I think it's pretty neat (but also very stupid :zany_face:).
 
 The **hex-encode.sh** and **hex-decode.sh** scripts are very generic and only have as a dependency **hexdump** and **printf**, so that makes them very portable.
 > [!NOTE]
