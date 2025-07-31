@@ -4,7 +4,7 @@
 
 This idea was born from sleep depravation and a very clouded mind :face_with_spiral_eyes: and is quite possibly the most idiotic, asinine way once could go about trying to run DOOM on any operating system.  
 While I was experimenting with modifying the iso, I noticed that any files I placed inside where not persisting after the boot-up sequence finished.  
-So with (at the time) no obvious way to include the files I needed (a precompiled version of fbdoom, libSDL-1.2.so.0 as well as the DOOM1.WAD) I said to myself...  
+So with (at the time) no obvious way to include the files I needed (a precompiled version of fbdoom in Virtual Box, libSDL-1.2.so.0 as well as the DOOM1.WAD) I said to myself...  
 
 > Was there a way to include the files somehow in the injected script...?  
 

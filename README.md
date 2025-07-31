@@ -1,12 +1,12 @@
 # Tiny-Core-DOOM
 
-A collection of scripts that modify the Tiny Core Linux iso to include a playable version of classic DOOM.
+A collection of scripts that modify the Tiny Core Linux iso to include a playable version of classic **DOOM**.
 
 ## Why do this ?
 
-I was inspired be this [repository](https://github.com/shadlyd15/DoomLinux) which builds a minimal version of Linux just to play DOOM.  
+I was inspired be this [repository](https://github.com/shadlyd15/DoomLinux) which builds a minimal version of Linux just to play **DOOM**.  
 I thought that was pretty cool and wondered what other minimal Linux distro could be used for this purpose... and then I thought of Tiny Core Linux Core edition.  
-At just **17MB** it seemed to be the ideal candidate for such a silly experiment :sweat_smile: (although the final iso is closer to 25MB in most cases)  
+At just **17MB** it seemed to be the ideal candidate for such a silly experiment :sweat_smile: (although the final iso is closer to **25MB** in most cases)  
 So here instead of building a minimal Linux distro from scratch, we just modify the iso directly.  
 For the provided **scripts to work you need to download the** [**Core**](http://www.tinycorelinux.net/16.x/x86/release/Core-current.iso) version of Tiny Core Linux and make the script point to it.  
 More info on how to use the scripts and how they work is provided in the **README.md** found in each separate directory.  
@@ -25,4 +25,16 @@ Or better yet make your own version using the script and accompanying files foun
 
 ## Running in a VM
 
-I used Virtual Box to test the generated isos u
+I used Virtual Box to test the generated isos using a very basic configuration:
+
+- Operating System: **Other/Unknown (32bit)**  
+- Base Memory: **98MB**  
+- Video Memory: **1MB**
+
+These options are the bare minimum to get **DOOM** to execute in the VM (you need more Base Memory if you choose to use [Tiny Core DOOM Internet](https://github.com/Mr-Watch/Tiny-Core-DOOM/tree/main/Tiny%20Core%20DOOM%20Internet) because of the fact that it needs to install a lot of extra dependences as well as build the executable - **190MB** minimum)  
+(you also need more Base Memory if you choose to use [Tiny Core DOOM Script Injection](https://github.com/Mr-Watch/Tiny-Core-DOOM/tree/main/Tiny%20Core%20DOOM%20Script%20Injection) because it needs to be able to hold the files in memory as it reconstructs them - **122MB** minimum)  
+
+## Using a USB Flash Drive
+
+The isos generated should be able to be used with any utility designed to burn iso files on USB Flash Drives (**rufus**, **unetbootin** etc).  
+I personally used **balenaEtcher**, so I can verify that it works, but you should be able to even use `dd` to get the job done.  
