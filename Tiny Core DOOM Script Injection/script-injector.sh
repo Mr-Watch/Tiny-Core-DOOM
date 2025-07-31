@@ -62,7 +62,7 @@ sudo rm -rf temp_directory
 
 echo "Repacking the directories to a .iso file..."
 cd ..
-xorriso -as mkisofs -o "$output_name".iso -b boot/isolinux/isolinux.bin -c boot/isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -J -r -V "\$output_name" .
+xorriso -as mkisofs -o "$output_name".iso -b boot/isolinux/isolinux.bin -c boot/isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -J -r -V "$output_name" .
 
 echo "Making the iso bootable..."
 isohybrid "$output_name".iso

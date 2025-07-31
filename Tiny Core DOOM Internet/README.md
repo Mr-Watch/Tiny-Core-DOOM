@@ -7,7 +7,7 @@ The DOOM engine that is used is [fbdoom](https://github.com/maximevince/fbDOOM),
 When you boot the generated iso (assuming you can get a **working internet connection** under Tiny Core Linux) it will start executing a script that will download **first the required dependencies** (linux-6.12_api_headers, glibc_base-dev, gcc, SDL, git, make, wget).  
 Then it will clone the **fbdoom** repository and procid to compile it into an executable binary.  
 After that is done it uses **wget** to download the DOOM WAD file (v1.9).  
-Finally it creates a little starter script for DOOM and proceeds to execute it.  
+Finally it creates a little starter script for DOOM and proceeds to execute it (this starter script is present in all version of **Doom-install-script**).  
 
 ## script-injector.sh
 
@@ -70,7 +70,6 @@ First we make a copy of the original .ashrc file (this file is what loads the sh
 Then we make a new temporary script and inject our supplied script in to it.  
 And the most crucial part is that we later append a small snippet into that script that restores the state of the .ashrc file as soon as our script is done executing.  
 This is necessary because if not for this small addition, every time we would start a shell, the script would load all over again.  
-
 
 ```sh
 sudo cp etc/skel/.ashrc etc/skel/.ashrc.old
